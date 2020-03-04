@@ -3,12 +3,12 @@ function Render(temp, obj) {
     for (key in obj) {
         if (typeof obj[key] === "string") {
             temp = temp.replace(
-                new RegExp(`{{ ${key} }}`, "gm"),
+                new RegExp(`{{ ${key} }}`, "gim"),
                 obj[key].toString()
             )
         }
     }
-    temp = temp.replace(/\{\{\ ?\w+\ ?\}\}/gmi, "")
+    temp = temp.replace(/\{\{\ ?\w+\ ?\}\}/gim, "")
     return temp
 }
 
