@@ -8,7 +8,7 @@ function Render(temp, obj) {
             )
         }
     }
-    temp = temp.replace(/\{\{\ \w+\ \}\}/gmi, "")
+    temp = temp.replace(/\{\{\ ?\w+\ ?\}\}/gmi, "")
     return temp
 }
 
