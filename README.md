@@ -6,13 +6,12 @@ This thing uses *{{ x }}*-placeholder. If a placeholder stays empty, it will be 
 ```javascript
 var Render = require("./render")
 
-var text = Render(
-`
-  Hello, my name is {{ name }}.
-  My favourite programming language is {{ favLang }},
-  but everyone tells me to learn a real language.
+var text = Render(`
+    Hello, my name is {{ name }}.
+    My favourite programming language is {{ favLang }},
+    but everyone tells me to learn a real language.
 `, {
-  name: "Iljucha",
-  favLang: "JavaScript"
+    name: "Iljucha",
+    favLang: "JavaScript"
 })
 ```
