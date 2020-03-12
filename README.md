@@ -15,3 +15,11 @@ var text = Render(`
     favLang: "JavaScript"
 })
 ```
+
+### Output
+Guess what?
+```javascript
+    Hello, my name is Iljucha.
+    My favourite programming language is JavaScript,
+    but everyone tells me to learn a real language.
+````
