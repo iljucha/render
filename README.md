@@ -3,7 +3,7 @@ It's not even a render engine?! This thing uses *{{ x }}*-placeholder.
 
 ## Usage
 ```javascript
-var Render = require("./render")
+import Render from "@iljucha/render"
 
 var text = Render(`
     Hello, my name is {{ name }}.
