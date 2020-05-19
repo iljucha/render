@@ -1,4 +1,4 @@
-# render
+# Render
 It's not even a render engine?! This thing uses *{{ x }}*-placeholder.
 
 ## Usage
