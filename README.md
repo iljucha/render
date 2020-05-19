@@ -12,8 +12,6 @@ var text = Render(`
 `, {
     name: "Iljucha",
     favLang: "JavaScript"
-}, {
-    removeUnused: false
 })
 ```
 
@@ -22,5 +20,5 @@ Guess what?
 ```
     Hello, my name is Iljucha.
     My favourite programming language is JavaScript,
-    but everyone tells me to learn a real language. {{ nope }}
+    but everyone tells me to learn a real language.
 ````
