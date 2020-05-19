@@ -1,0 +1,25 @@
+{
+  "name": "@iljucha/render",
+  "version": "1.0.0",
+  "description": "It's not even a render engine?! ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iljucha/render.git"
+  },
+  "keywords": [
+    "rendering",
+    "string",
+    "object"
+  ],
+  "author": "Ilja Bituzki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iljucha/render/issues"
+  },
+  "homepage": "https://github.com/iljucha/render#readme"
+}
