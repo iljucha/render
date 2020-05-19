@@ -4,7 +4,6 @@
   "description": "It's not even a render engine?! ",
   "main": "index.js",
   "type": "module",
-  "types": "./index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
