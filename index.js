@@ -9,14 +9,24 @@ export default function Render(temp, obj) {
     }
     let key
     for (key in obj) {
-        if (typeof obj[key] === "string") {
-            temp = temp.replace(
-                new RegExp(`{{ ?${key} ?}}`, "gm"),
-                obj[key].toString()
-            )
-        }
+        temp = temp.replace(new RegExp(`{{ ?${key} ?}}`, "gm"), obj[key])
     }
     return temp
+}
+
+/**
+ * Replaces {{ key }}s in string template
+ * @param {string} temp - String template
+ * @param {object} obj - Key-Values
+ * @param {Function} callback - callback(error, data)
+ */
+export function Render2(temp, obj, callback) {
+    try {
+        callback(null, Render(temp, obj))
+    }
+    catch (error) {
+        callback(error, null)
+    }
 }
 
 /**
