@@ -4,7 +4,9 @@
  * @param {object} obj - Key-Values
  */
 export default function Render(temp, obj) {
-    if (typeof temp !== "string") return ""
+    if (typeof temp !== "string") {
+        return ""
+    }
     let key
     for (key in obj) {
         if (typeof obj[key] === "string") {
@@ -15,4 +17,12 @@ export default function Render(temp, obj) {
         }
     }
     return temp
+}
+
+/**
+ * Replaces {{ key }}s in string template
+ * @param {object} obj - Key-Values
+ */
+String.prototype.render = function(obj) {
+    return Render(this, obj)
 }
