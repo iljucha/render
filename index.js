@@ -7,9 +7,15 @@ export default function Render(temp, obj) {
     if (typeof temp !== "string") {
         return ""
     }
-    let key
+    let key, regexp
     for (key in obj) {
-        temp = temp.replace(new RegExp(`{{ ?${key} ?}}`, "gm"), obj[key])
+        regexp = new RegExp(`{{ ?${key} ?}}`, "gm")
+        if (typeof obj[key] === "string") {
+            temp = temp.replace(regexp, obj[key])
+        }
+        else {
+            temp = temp.replace(regexp, "" + obj[key].toString())
+        }
     }
     return temp
 }
