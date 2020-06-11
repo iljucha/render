@@ -5,7 +5,10 @@
  */
 export default function Render(temp, obj) {
     if (typeof temp !== "string") {
-        return ""
+        throw TypeError("Type of 'temp' must be string")
+    }
+    if (typeof obj !== "object") {
+        throw TypeError("'obj' must be an object")
     }
     let key, regexp
     for (key in obj) {
@@ -14,7 +17,7 @@ export default function Render(temp, obj) {
             temp = temp.replace(regexp, obj[key])
         }
         else {
-            temp = temp.replace(regexp, "" + obj[key].toString())
+            temp = temp.replace(regexp, "" + obj[key])
         }
     }
     return temp
