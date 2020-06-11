@@ -24,7 +24,7 @@ export default function Render(temp, obj) {
  * Replaces {{ key }}s in string template
  * @param {string} temp - String template
  * @param {object} obj - Key-Values
- * @param {Function} callback - callback(error, data)
+ * @param {Function} callback - callback(error: Error, data: String)
  */
 export function Render2(temp, obj, callback) {
     try {
