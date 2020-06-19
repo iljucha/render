@@ -1,24 +1,18 @@
+import Assert from "@iljucha/assert"
+
 /**
  * Replaces {{ key }}s in string template
  * @param {string} temp - String template
  * @param {object} obj - Key-Values
  */
 export default function Render(temp, obj) {
-    if (typeof temp !== "string") {
-        throw TypeError("Type of 'temp' must be string")
-    }
-    if (typeof obj !== "object") {
-        throw TypeError("'obj' must be an object")
-    }
+    Assert.type(temp, "temp", "string")
+    Assert.type(obj, "obj", "object")
+    Assert.type(Object.values(obj), "obj values", "Array<string>")
     let key, regexp
     for (key in obj) {
         regexp = new RegExp(`{{ ?${key} ?}}`, "gm")
-        if (typeof obj[key] === "string") {
-            temp = temp.replace(regexp, obj[key])
-        }
-        else {
-            temp = temp.replace(regexp, "" + obj[key])
-        }
+        temp.replace(regexp, obj[key])
     }
     return temp
 }

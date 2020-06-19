@@ -16,6 +16,9 @@
     "string",
     "object"
   ],
+  "dependencies": {
+    "@iljucha/assert": "1.0.0"
+  },
   "author": "Ilja Bituzki",
   "license": "ISC",
   "bugs": {
